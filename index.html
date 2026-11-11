@@ -1,0 +1,95 @@
+<!-- =========================================================================
+     PROJECT:     RETRO_ASCII_BG - Live Demonstration Shell
+     AUTHOR:      BjornEriksson / Björn Eriksson
+     DESCRIPTION: A clean minimal runtime environment showcasing the 
+                  glowing neon purple digital terminal grid layout.
+     ========================================================================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RETRO_ASCII_BG - Live Terminal Environment Demo</title>
+  <style>
+    /* Reset margins and establish core matrix backdrop */
+    body {
+      background-color: #0f0a12; /* Deep void tone */
+      color: #bb66ff; /* High intensity cyber-purple */
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      text-shadow: 0 0 5px rgba(187, 102, 255, 0.4);
+    }
+
+    /* Subdued CRT voltage ripple analog effect layer */
+    body::before {
+      content: " ";
+      display: block;
+      position: fixed;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%);
+      z-index: 2;
+      background-size: 100% 4px;
+      pointer-events: none;
+    }
+
+    /* Central static module isolated over the active grid array */
+    .terminal-box {
+      border: 4px double #bb66ff; 
+      background-color: #0f0a12;
+      padding: 30px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(187, 102, 255, 0.25);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-top: 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #dfb3ff; 
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #8c43cc; 
+    }
+
+    .footer-note {
+      font-size: 0.75rem;
+      margin-top: 25px;
+      border-top: 1px dashed #bb66ff;
+      padding-top: 15px;
+      opacity: 0.8;
+      color: #bb66ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Core interface module wrapper -->
+  <div class="terminal-box">
+    <h1>&gt; RETRO_ASCII_BG</h1>
+    <p>A pure vanilla JavaScript & HTML5 Canvas matrix network animation.</p>
+    <p>Step-by-step grid movements engineered to simulate classic CRT terminal nodes and BBS networks.</p>
+    
+    <div class="footer-note">
+      [ STATUS: RUNNING_IN_VIOLET_MODE ]<br>
+      Open README.md for installation instructions.
+    </div>
+  </div>
+
+  <!-- Boot up the matrix script array link -->
+  <script src="background.js"></script>
+
+</body>
+</html>
